@@ -50,6 +50,7 @@ button.addEventListener('click', function(){
     }
     cliente.innerHTML = nome;
     km.innerHTML = distanza + 'km';
+    Nome_Cognome.innerHTML = nome;
 
 });
 
