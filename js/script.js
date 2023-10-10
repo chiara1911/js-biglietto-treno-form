@@ -16,4 +16,17 @@ const discount65 = 0.4;
 console.log(tariffaKm);
 console.log(discount18);
 console.log(discount65);
+let distanza = 10;
+let age = 81;
+let price = (tariffaKm * distanza);
 
+
+
+if (age < 18){
+
+    price = price - (price * discount18);
+} else if (age > 66) {
+    price = price - (price * discount65);
+}
+
+console.log(price);
