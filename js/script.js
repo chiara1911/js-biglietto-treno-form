@@ -32,21 +32,25 @@ button.addEventListener('click', function(){
     let categoria = document.getElementById('categoria');
     console.log(categoria);
     if ( age === 'minorenne' ){
-        price = price - (price * 0.2);
+        price = price - (price * discount18);
         prezzo.innerHTML = price.toFixed(2) + ' euro ';
         categoria.innerHTML = 'minorenne';
+        sconto.innerHTML = '20%';
         
     } else if( age === 'adulto'){       
         prezzo.innerHTML = price.toFixed(2) + ' euro ';
         categoria.innerHTML = 'adulto';
+        sconto.innerHTML = 'none';
 
     } else {
-        price = price - (price * 0.4);
+        price = price - (price * discount65);
         prezzo.innerHTML = price.toFixed(2) + ' euro ';
         categoria.innerHTML = 'senior';
+        sconto.innerHTML = '40%';
     }
     cliente.innerHTML = nome;
- console.log(cliente);
+    km.innerHTML = distanza + 'km';
+
 });
 
 

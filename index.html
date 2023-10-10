@@ -11,51 +11,78 @@
 </head>
 
 <body>
+    <main class="bg-danger">
+        <h2 class="text-uppercase text-center text-light fs-1 pt-2"> calcola il tuo biglietto</h2>
+    <div class="container bg-light b-radius mb-4 d-flex w-75 h-75 p-3 ">
+        <div class="mb-3 col-3 m-2">
+            <label for="nome" class="form-label">Nome</label>
+
+            <input type="text" class="form-control" placeholder="" name="nome" id="nome" value="">
+        </div>
+        <div class="mb-3 col-3 m-2">
+            <label for="distanza" class="form-label">Distanza</label>
+            <input type="text" class="form-control" placeholder="" name="distanza" id="distanza" value="">
+        </div>
+        <div class=" mb-3 col-3 m-4 d-flex align-items-end">
+            <select name="age" id="age">
+                <option value="minorenne">
+                    under 18 </option>
+                <option value="adulto"> 19-65 </option>
+                <option value="maggiorenne"> over 65 </option>
+            </select>
+        </div>
+        <div class="mb-3 d-flex align-items-end">
+            <button class="btn btn-success">invia</button>
+        </div>
+    </div>
+
+    <!-- sezione biglietto -->
     <div class="container">
-    <div class="mb-3">
-        <label for="nome" class="form-label">Nome</label>
+        <h2 class="text-uppercase text-center text-light fs-1 pt-2"> questo è il tuo biglietto</h2>
+        <div class="row d-flex">
+            <div class="col-6 ">
+                <h2 class="bg-light b-radius p-3"> Nome e Cognome: <span id="cliente"></span></h2>                
+            </div>
 
-        <input type="text" class="form-control" placeholder="" name="nome" id="nome" value="">
-    </div>
-    <div class="mb-3">
-        <label for="distanza" class="form-label">Distanza</label>
-        <input type="text" class="form-control" placeholder="" name="distanza" id="distanza" value="">
-    </div>
-    <div class=" mb-3">
-
-        <select name="age" id="age">
-            <option value="minorenne">
-                under 18 </option>
-            <option value="adulto"> 19-65 </option>
-            <option value="maggiorenne"> over 65 </option>
-        </select>
-    </div>
-    <div class="mb-3">
-        <button class="btn btn-success">invia</button>
-    </div>
-</div>
-<div class="container">
-<div class="row d-flex">
-    <div class="col-4 bg-primary">
-        <h3 id="cliente"></h3>  </div>
-<div class="col-4 bg-success">
-        <div id="prezzo">    
+            <div class="col-6 ">
+                <h2 class="bg-light b-radius p-3"> Km da percorrere:
+                    <span id="km"></span>
+                </h2>                
+            </div>
         </div>
-    </div>
-    <div class="col-4 bg-warning">
-        <div id="categoria">
+
+        <div class="row">
+           
+
+
+            <div class="col-6 ">
+                <h3 class="bg-light b-radius p-3">totale prezzo biglietto: <div id="prezzo"></div></h3>
+
+                <!-- <div id="prezzo">
+                </div> -->
+            </div>
+            <div class="col-3 ">
+                <h3 class="bg-light b-radius p-3">Categoria: <div id="categoria"></div></h3>
+                
+                
+            </div>
+            <div class="col-3 ">
+                <h3 class="bg-light b-radius p-3">Sconto applicato: <div id="sconto"></div></h3>
+                
+                
+            </div>
+
+
+            <div class="col-8">
+
+            </div>
         </div>
-    </div>
-        
-  
-    <div class="col-8">
+
 
     </div>
 
-</div>
-</div>
 
-
+</main>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
