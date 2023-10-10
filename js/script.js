@@ -22,11 +22,32 @@ const button = document.querySelector('.btn-success');
 
 button.addEventListener('click', function(){
 
-    let nome = document.getElementById('nome').value;
-    
-    let distanza = parseInt(document.getElementById('distanza').value);  
-    let age = parseInt(document.getElementById('age').value);  
-    let price = (tariffaKm * distanza);
-    console.log(nome,distanza, age, price);
+    const nome = document.getElementById('nome').value;
    
+    const distanza = parseInt(document.getElementById('distanza').value);  
+    const age = document.getElementById('age').value;  
+    let price = (tariffaKm * distanza);
+    const cliente = document.getElementById('cliente');
+    console.log(nome,distanza, age, price);
+    let categoria = document.getElementById('categoria');
+    console.log(categoria);
+    if ( age === 'minorenne' ){
+        price = price - (price * 0.2);
+        prezzo.innerHTML = price.toFixed(2) + ' euro ';
+        categoria.innerHTML = 'minorenne';
+        
+    } else if( age === 'adulto'){       
+        prezzo.innerHTML = price.toFixed(2) + ' euro ';
+        categoria.innerHTML = 'adulto';
+
+    } else {
+        price = price - (price * 0.4);
+        prezzo.innerHTML = price.toFixed(2) + ' euro ';
+        categoria.innerHTML = 'senior';
+    }
+    cliente.innerHTML = nome;
+ console.log(cliente);
 });
+
+
+
